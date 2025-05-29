@@ -1,0 +1,42 @@
+.cardTraining {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardTraining:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.imagenTraining {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardTraining h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #2b2b2b;
+}
+
+.cardTraining p {
+    font-size: 1rem;
+    color: #4caf50;
+    margin-bottom: 0;
+}

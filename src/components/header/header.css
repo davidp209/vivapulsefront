@@ -1,0 +1,119 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    height: 10rem;
+     width: auto;
+    filter: drop-shadow(0 2px 8px #38bdf8aa);
+    transition: transform 0.2s;
+    animation: pulse 2.5s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #38bdf855; }
+    70% { box-shadow: 0 0 0 12px #38bdf800; }
+    100% { box-shadow: 0 0 0 0 #38bdf800; }
+}
+
+
+
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-btn,
+.register-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.register-btn {
+    background: #28a745;
+}
+
+.user-icon-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsive: en móvil, oculta los botones y muestra el icono */
+@media (max-width: 600px) {
+    .login-btn,
+    .register-btn {
+        display: none;
+    }
+    .user-icon-btn {
+        display: block;
+    }
+    .menu {
+        gap: 1rem;
+    }
+}
+
+/* 
+@media (max-width: 900px) {
+    .menu {
+        gap: 1rem;
+    }
+    .header {
+        padding: 1rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+        padding: 0.7rem 0.5rem;
+    }
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .auth-buttons {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .login-btn,
+    .register-btn {
+        display: none;
+    }
+    .user-icon-btn {
+        display: block;
+    }
+}
+
+
+*/

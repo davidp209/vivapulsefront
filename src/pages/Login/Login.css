@@ -1,0 +1,91 @@
+
+
+.max-w-sm {
+  max-width: 380px;
+}
+
+form {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(56, 189, 248, 0.13);
+  padding: 2.5rem 2rem;
+  margin: 3rem auto;
+  transition: box-shadow 0.2s;
+}
+
+form:hover {
+  box-shadow: 0 12px 40px 0 #38bdf855;
+}
+
+.text-xl {
+  background: linear-gradient(90deg, #38bdf8 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+label {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  border-radius: 0.7rem;
+  border: 1.5px solid #c7d2fe;
+  font-size: 1.05rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #f8fafc;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px #38bdf822;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #6366f1 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 0;
+  margin-top: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 #38bdf855;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+  box-shadow: 0 4px 24px 0 #6366f155;
+}
+
+.text-red-500 {
+  color: #ef4444;
+  background: #fef2f2;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 1.2rem 0.5rem;
+  }
+}

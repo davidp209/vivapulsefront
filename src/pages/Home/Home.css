@@ -1,0 +1,66 @@
+/* Hero section */
+.bg-primary {
+  background: linear-gradient(135deg, #0066cc, #00aaff);
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.hero button {
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* Sección clara */
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Botones */
+.btn-light {
+  background-color: #fff;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+}
+
+.btn-light:hover {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

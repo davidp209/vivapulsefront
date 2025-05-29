@@ -1,0 +1,86 @@
+.footer {
+  background: linear-gradient(90deg, #e0f7fa 0%, #c7d2fe 100%);
+  border-top: 3px solid #38bdf8;
+  box-shadow: 0 -2px 16px 0 rgba(56, 189, 248, 0.07);
+  color: #22223b;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 0.95rem;
+}
+.logoFooter{
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer h6 {
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer ul li a:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  color: #2563eb;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.footer .social-icons a:last-child {
+  margin-right: 0;
+}
+
+.footer .social-icons a:hover {
+  color: #38bdf8;
+  transform: translateY(-3px) scale(1.12);
+}
+
+.footer hr {
+  border-top: 2px solid #38bdf8;
+  opacity: 0.2;
+}
+
+@media (max-width: 767.98px) {
+  .footer .text-md-start {
+    text-align: center !important;
+  }
+
+  .footer .text-md-end {
+    margin-top: 1rem;
+    text-align: center !important;
+  }
+
+  .footer .row > div {
+    margin-bottom: 2rem;
+  }
+
+  .footer .social-icons {
+    margin-top: 1rem;
+  }
+}
