@@ -19,7 +19,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/authenticate', credentials);
+      const response = await axios.post('https://vivapulse-backend.onrender.com/api/auth/authenticate', credentials);
       const { token } = response.data;
 
       // Guarda el token (puedes usar localStorage o cookies seguras)

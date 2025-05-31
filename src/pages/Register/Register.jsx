@@ -22,7 +22,7 @@ const Register = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/register', formData);
+      const response = await axios.post('https://vivapulse-backend.onrender.com/api/auth/register', formData);
       const { token } = response.data;
 
       localStorage.setItem('token', token);
