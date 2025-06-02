@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home-root">
-      {/* Hero Section */}
+    <div className="home-root mt-5">
+   
       <section className="hero-section d-flex align-items-center justify-content-center text-center">
         <div className="container">
           <div className="row align-items-center">
@@ -87,11 +87,7 @@ const Home = () => {
           <p className="lead mb-4">
             Únete a VivaPulse y descubre una nueva forma de gestionar tu bienestar.
           </p>
-          <Link to="/register">
-            <button className="btn btn-success btn-lg shadow px-5 py-3">
-              Registrarse gratis
-            </button>
-          </Link>
+           <Link to={"register"} className="register-btn px-5 py-3"> Registrarse es gratis</Link>
         </div>
       </section>
     </div>
