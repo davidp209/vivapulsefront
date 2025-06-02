@@ -15,6 +15,11 @@ const Descubre = () => {
                 <p>Explora rutinas, consejos y ejercicios para mejorar tu bienestar físico.</p>
                 <span role="img" aria-label="ejercicios" className="descubre-icon">🏋️‍♂️</span>
             </Link>
+            <Link to="#" className="descubre-card descubre-card-right animate-card enlaces proximamente">
+                <h2>Salud Mental</h2>
+                <p>Próximamente: técnicas de relajación, meditación y consejos para tu bienestar emocional.</p>
+                <span role="img" aria-label="salud mental" className="descubre-icon">🧘‍♀️</span>
+            </Link>
         </div>
     );
 }

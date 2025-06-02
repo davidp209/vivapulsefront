@@ -60,6 +60,19 @@
     animation: bounce 1.4s infinite alternate;
 }
 
+.proximamente {
+    background-color: #f8d7da; /* Fondo rojo claro */
+    color: #721c24; /* Texto rojo oscuro */
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+    cursor: not-allowed; /* Cursor indicando que no es clicable */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.proximamente:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el ratón */
+}
+
 @keyframes bounce {
     0% { transform: translateY(0);}
     100% { transform: translateY(-18px);}
