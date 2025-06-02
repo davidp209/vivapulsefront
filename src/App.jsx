@@ -12,14 +12,16 @@ import Contacto from './pages/Contacto/Contacto'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Alimentos from './pages/Alimentos/Alimentos'
 import Training from './pages/Training/Training'
+import PoliticaPrivacidad from './pages/PoliticaPrivacidad/PoliticaPrivacidad'
+import TerminosCondiciones from './pages/TerminosCondiciones/TerminosCondiciones'
+import LicenciaUso from './pages/LicenciaUso/LicenciaUso'
+import PoliticaCookies from './pages/PoliticaCookies/PoliticaCookies'
 
 function App() {
 
   return (
     <div >
-
       <Header></Header>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Descubre" element={<Descubre />} />
@@ -30,6 +32,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/aliments" element={<Alimentos />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/PoliticaPrivacidad" element={<PoliticaPrivacidad />} />
+        <Route path="/TerminosCondiciones" element={<TerminosCondiciones />} />
+        <Route path="/LicenciaUso" element={<LicenciaUso />} />
+        <Route path="/PoliticaCookies" element={<PoliticaCookies />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
 

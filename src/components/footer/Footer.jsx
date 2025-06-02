@@ -18,25 +18,16 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Recursos */}
-          <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 className="text-uppercase fw-bold">Resources</h6>
-            <ul className="list-unstyled">
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Docs</a></li>
-              <li><a href="#">Guides</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
+        
 
           {/* Compañía */}
           <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 className="text-uppercase fw-bold">Company</h6>
+            <h6 className="text-uppercase fw-bold">Empresa</h6>
             <ul className="list-unstyled">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">News</a></li>
+              <li><Link to={"/"}>Inicio</Link></li>
+              <li><Link to={"Descubre"}>Descubre</Link></li> 
+              <li><Link to={"Nosotros"}>Nosotros</Link></li>
+              <li><Link to={"Contacto"}>Contacto</Link></li>
             </ul>
           </div>
 
@@ -44,10 +35,10 @@ const Footer = () => {
           <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <h6 className="text-uppercase fw-bold">Legal</h6>
             <ul className="list-unstyled">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Licenses</a></li>
-              <li><a href="#">Cookies</a></li>
+              <li><Link to={"PoliticaPrivacidad"}>Política de Privacidad</Link></li>
+              <li><Link to={"TerminosCondiciones"}>Terminos & Condiciones</Link></li>
+              <li><Link to={"LicenciaUso"}>Licencia</Link></li>
+              <li><Link to={"PoliticaCookies"}>Cookies</Link></li>
             </ul>
           </div>
         </div>

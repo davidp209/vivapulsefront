@@ -1,0 +1,49 @@
+.privacidad-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.privacidad-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0066cc;
+  text-align: center;
+}
+
+.privacidad-container .fecha {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.privacidad-container section {
+  margin-bottom: 2rem;
+}
+
+.privacidad-container h2 {
+  color: #007bff;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.privacidad-container p {
+  margin-bottom: 1rem;
+}
+
+.privacidad-container ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.privacidad-container ul li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
