@@ -1,5 +1,5 @@
 export function getUserDetails() {
-    return fetch(`http://localhost:8080/api/me`, {
+    return fetch(`https://vivapulse-backend.onrender.com/api/me`, {
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
             'Content-Type': 'application/json'
