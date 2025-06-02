@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
            <Link to={"/"}> <img src={logo} alt="Logo VivaPulse" className='logoFooter' /> </Link>
             <p>
-                miau
+                Impulsando tu bienestar y salud cada día con VivaPulse.
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 export function getAliments(id) {
 
-    return fetch(`http://localhost:8080/api/aliments`)
+    return fetch(`https://vivapulse-backend.onrender.com/api/aliments`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
