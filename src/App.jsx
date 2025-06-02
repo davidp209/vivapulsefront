@@ -16,6 +16,7 @@ import PoliticaPrivacidad from './pages/PoliticaPrivacidad/PoliticaPrivacidad'
 import TerminosCondiciones from './pages/TerminosCondiciones/TerminosCondiciones'
 import LicenciaUso from './pages/LicenciaUso/LicenciaUso'
 import PoliticaCookies from './pages/PoliticaCookies/PoliticaCookies'
+import FloatingActions from './components/FloatingActions/FloatingActions'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/PoliticaCookies" element={<PoliticaCookies />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
+      <FloatingActions></FloatingActions>
 
 
       <Footer></Footer>

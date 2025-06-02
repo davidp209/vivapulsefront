@@ -1,0 +1,92 @@
+.floating-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: flex;
+  flex-direction: column-reverse; /* <-- clave: al revés */
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.main-button {
+  width: 60px;
+  height: 60px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.main-button:hover {
+  transform: rotate(90deg);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px); /* Aparece desde abajo */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.floating-container.open .action-buttons {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0); /* posición original */
+}
+
+.action-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.ai-chat {
+  background: #6f42c1;
+}
+
+
+@media (max-width: 600px) {
+  .floating-container {
+    bottom: 0.5rem;
+    right: 1rem;
+    gap: 0.5rem;
+  }
+
+  .main-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .action-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+  @media (max-width: 600px) {
+  .floating-container.open .action-buttons {
+    flex-direction: row; /* horizontal */
+  }
+}
+
+}
