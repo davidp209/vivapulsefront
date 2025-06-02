@@ -4,7 +4,7 @@ const CardAlimentos = (props) => {
     return (
         <div className="card col-3 cardAlimentos" key={props.alimento.id}>
             <img
-              src={`/src/assets/alimentos/${props.alimento.image}`}
+              src={`/assets/alimentos/${props.alimento.image}`}
               className="imagenAlimento"
               alt={props.alimento.name}
             />
