@@ -15,7 +15,7 @@ const Dashboard = () => {
     const { userDetails, buscando } = useUserDetails();
 
     return (
-        <div className="dashboard-wrapper d-flex">
+        <div className="dashboard-wrapper">
             {/* Barra lateral */}
             <div className="sidebar">
                 <h3 className="sidebar-title">VivaPulse</h3>
@@ -42,8 +42,8 @@ const Dashboard = () => {
             </div>
 
             {/* Contenido principal */}
-            <div className="dashboard-container flex-grow-1 d-flex flex-column align-items-center pt-5 pb-5">
-                <h1 className="mb-4 fw-bold text-primary">Dashboard</h1>
+            <div className="dashboard-container">
+                <h1 className="mb-4 fw-bold text-primary text-center pt-4">Dashboard</h1>
 
                 <div className="container py-4">
                     <div className="row justify-content-center gap-4">
