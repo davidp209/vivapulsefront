@@ -5,7 +5,7 @@ const CardTraining = (props) => {
     return (
         <div className="card col-3 cardTraining" key={training.id}>
             <img
-              src={`/src/assets/trainings/${training.image}`}
+              src={`assets/trainings/${training.image}`}
               className="imagenTraining"
               alt={training.name}
             />
