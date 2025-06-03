@@ -1,4 +1,4 @@
- .circle-chart {
+.circle-chart {
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -48,3 +48,114 @@
       font-weight: 500;
       font-size: 1rem;
     }
+
+    .dashboard-wrapper {
+    display: flex;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50; /* Fondo oscuro */
+    color: #ecf0f1; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1abc9c; /* Verde claro */
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu li:hover {
+    background-color: #34495e; /* Fondo más oscuro al pasar el mouse */
+}
+
+.sidebar-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #1abc9c; /* Verde claro */
+}
+
+.sidebar-menu li span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar-footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #e74c3c; /* Rojo */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: #c0392b; /* Rojo más oscuro */
+}
+
+.logout-btn .sidebar-icon {
+    margin-right: 8px;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 600px;
+}
+
+.welcome-card .card {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-card h2 {
+    font-size: 28px;
+    color: #007bff; /* Azul primario */
+}
+
+.welcome-card p {
+    font-size: 16px;
+    color: #6c757d; /* Texto gris */
+}
+
+.welcome-card p span {
+    color: #343a40; /* Texto más oscuro */
+    font-weight: bold;
+}
