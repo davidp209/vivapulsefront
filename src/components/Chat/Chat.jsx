@@ -9,7 +9,7 @@ const Chat = () => {
   const [input, setInput] = useState("");
 
   const sendMessage = async (message) => {
-    const res = await fetch("http://localhost:8081/api/chat", {
+    const res = await fetch("https://vivapulse-backend.onrender.com/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: "Hola" }),
