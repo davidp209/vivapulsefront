@@ -12,12 +12,14 @@ const Chat = () => {
     const res = await fetch("https://vivapulse-backend.onrender.com/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: "Hola" }),
+      body: JSON.stringify({ message }),
     });
 
     const data = await res.json();
-    // Aquí data YA es un objeto
-    console.log(data.reply);
+    if (data.error) {
+      // Puedes mostrar el error al usuario o manejarlo como prefieras
+      return "Lo siento, no se pudo obtener respuesta del modelo.";
+    }
     return data.reply;
   };
 
