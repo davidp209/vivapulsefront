@@ -15,8 +15,11 @@ If you are developing a production application, we recommend using TypeScript an
 ## Instalar
 npm install react-icons para boton flotante
 
-
+--------------------------------------------------------------------------------------------------------------------
 Evitar muchas peticiones seguidas (con debounce en React)
 En React, para evitar enviar una petición cada vez que el usuario escribe (especialmente en "modo streaming"), usa debounce:
 
 npm install lodash
+
+---------------------------------------------------------------------------------------------------------------------
+npm install axios

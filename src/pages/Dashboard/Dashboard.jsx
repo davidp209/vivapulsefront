@@ -1,6 +1,7 @@
 import useUserDetails from "../../hooks/useUserDetails";
 import "./Dashboard.css";
 import { FaAppleAlt, FaDumbbell, FaBrain, FaSignOutAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
     if (!localStorage.getItem("token")) {
@@ -21,16 +22,22 @@ const Dashboard = () => {
                 <h3 className="sidebar-title">VivaPulse</h3>
                 <ul className="sidebar-menu">
                     <li>
-                        <FaAppleAlt className="sidebar-icon" />
-                        <span>Alimentos</span>
+                        <Link to="/anadirAlimentos" className="sidebar-link">
+                            <FaAppleAlt className="sidebar-icon" />
+                            <span>Comida</span>
+                        </Link>
                     </li>
                     <li>
-                        <FaDumbbell className="sidebar-icon" />
-                        <span>Entrenamiento</span>
+                        <Link to="/entrenamientos" className="sidebar-link">
+                            <FaDumbbell className="sidebar-icon" />
+                            <span>Entrenamiento</span>
+                        </Link>
                     </li>
                     <li>
-                        <FaBrain className="sidebar-icon" />
-                        <span>Salud Mental</span>
+                        <Link to="/salud-mental" className="sidebar-link">
+                            <FaBrain className="sidebar-icon" />
+                            <span>Salud Mental</span>
+                        </Link>
                     </li>
                 </ul>
                 <div className="sidebar-footer">
@@ -40,8 +47,8 @@ const Dashboard = () => {
                     </button>
                 </div>
             </div>
+    
 
-            {/* Contenido principal */}
             <div className="dashboard-container">
                 <h1 className="mb-4 fw-bold text-primary text-center pt-4">Dashboard</h1>
 

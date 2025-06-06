@@ -18,6 +18,8 @@ import LicenciaUso from './pages/LicenciaUso/LicenciaUso'
 import PoliticaCookies from './pages/PoliticaCookies/PoliticaCookies'
 import FloatingActions from './components/FloatingActions/FloatingActions'
 import Chat from './components/Chat/Chat'
+import AñadirComida from './pages/AñadirComida/AñadirComida'
+import Comidas from './pages/Comidas/Comidas'
 
 function App() {
 
@@ -39,6 +41,8 @@ function App() {
         <Route path="/LicenciaUso" element={<LicenciaUso />} />
         <Route path="/PoliticaCookies" element={<PoliticaCookies />} />
         <Route path="/chat" element={<Chat></Chat>} />
+        <Route path="/comidas" element={<Comidas />} />
+        <Route path="/añadirComidas" element={<AñadirComida />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
       <FloatingActions></FloatingActions>
