@@ -13,7 +13,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 
 ## Instalar
-npm install react-icons para boton flotante
+npm install react-icons para boton flotante y iconos
 
 --------------------------------------------------------------------------------------------------------------------
 Evitar muchas peticiones seguidas (con debounce en React)

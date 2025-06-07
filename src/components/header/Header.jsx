@@ -1,7 +1,7 @@
 import  { useState, useRef, useEffect } from "react";
 import imagenLogo from "../../assets/logo/LOGO.svg";
 import { Link } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaBars } from "react-icons/fa";
 import "./Header.css";
 
 const Header = () => {
@@ -27,14 +27,14 @@ const Header = () => {
                 <Link to={"/"}> <img src={imagenLogo} alt="Logo" /> </Link>
             </div>
             <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-                Menú
+                <FaBars size={24} />
             </button>
             <nav ref={menuRef} className={`menu ${menuOpen ? "open" : ""}`}>
                 <Link to={"/"} onClick={() => setMenuOpen(false)}>Inicio</Link>
                 <Link to={"/Descubre"} onClick={() => setMenuOpen(false)}>Descubre</Link>
                 <Link to={"/Nosotros"} onClick={() => setMenuOpen(false)}>Nosotros</Link>
                 <Link to={"/Contacto"} onClick={() => setMenuOpen(false)}>Contacto</Link>
-                {/* Solo visible en móvil */}
+                {/*movil */}
                 <div className="mobile-auth">
                     <Link to={"login"} className="login-btn" onClick={() => setMenuOpen(false)}>
                         <FaUser className="user-icon" />
