@@ -19,11 +19,18 @@ const AlimentosPriv = () => {
 
     // Aquí luego puedes implementar el envío a la base de datos
     const onConfirmar = async (carrito) => {
+        // Obtén el usuario actual (ajusta según tu app)
+        const user = JSON.parse(localStorage.getItem("user")); // Cambia si usas otro método
+        const userId = user?.id || 3; // Usa el id real, o 3 como fallback
+
+        // Puedes pedir el nombre de la comida al usuario, aquí lo dejo fijo como ejemplo
+        const name = "Cena";
+
         const data = {
-            user: { id:  254}, // Cambia por el id real del usuario si lo tienes
             idAliment: carrito.map(item => item.id),
             calories: carrito.reduce((acc, item) => acc + item.calories, 0),
-            name: "Otra Comida saludable"
+            name,
+            user: { id: userId }
         };
 
         try {

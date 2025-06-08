@@ -20,6 +20,7 @@ import Chat from './components/Chat/Chat'
 import AlimentosPriv from './pages/AlimentosPriv/AlimentosPriv'
 import Carrito from './pages/Carrito/Carrito'
 import { CarritoProvider } from "./context/CarritoContext";
+import Pruebas from './pages/pruebas/pruebas'
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
           <Route path="/chat" element={<Chat></Chat>} />
           <Route path="/alimentosPriv" element={<AlimentosPriv />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/pruebas" element={<Pruebas />} />
+          {/* Rutas adicionales */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
         <FloatingActions></FloatingActions>
