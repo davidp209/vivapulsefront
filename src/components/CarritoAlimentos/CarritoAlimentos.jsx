@@ -13,7 +13,7 @@ const CarritoAlimentos = ({ carrito, onRemove, onConfirmar }) => (
                 </li>
             ))}
         </ul>
-        <button className="btn btn-success" onClick={onConfirmar}>
+        <button className="btn btn-success" onClick={() => onConfirmar(carrito)}>
             Confirmar selección
         </button>
     </div>

@@ -5,21 +5,33 @@ import AjaxLoader from "../../components/AjaxLoader/AjaxLoader";
 import CardAlimentos from "../../components/CardAlimentos/CardAlimentos";
 import CarritoAlimentos from "../../components/CarritoAlimentos/CarritoAlimentos";
 import { useCarrito } from "../../context/CarritoContext";
+import axios from "axios";
 
 const AlimentosPriv = () => {
     const { alimentosID, buscando } = useAliments();
     const { carrito, addToCart, removeFromCart } = useCarrito();
     const [searchTerm, setSearchTerm] = useState(""); // <-- Cambia [] por ""
 
-    // Filtrar alimentos según el término de búsqueda
+    // Filtrar 
     const filteredAlimentos = alimentosID?.filter((item) =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     // Aquí luego puedes implementar el envío a la base de datos
-    const handleConfirmar = () => {
-        // Por ahora solo mostramos en consola
-        console.log("Enviar a la base de datos:", carrito);
+    const onConfirmar = async (carrito) => {
+        const data = {
+            user: { id:  254}, // Cambia por el id real del usuario si lo tienes
+            idAliment: carrito.map(item => item.id),
+            calories: carrito.reduce((acc, item) => acc + item.calories, 0),
+            name: "Otra Comida saludable"
+        };
+
+        try {
+            await axios.post("https://vivapulse-backend.onrender.com/api/meals", data);
+            alert("Guardado correctamente");
+        } catch (error) {
+            alert("Error al guardar");
+        }
     };
 
     return (
@@ -63,6 +75,7 @@ const AlimentosPriv = () => {
                 )}
             </div>
 
+            <CarritoAlimentos carrito={carrito} onRemove={removeFromCart} onConfirmar={onConfirmar} />
         </div>
     );
 };
