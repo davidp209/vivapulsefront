@@ -9,8 +9,8 @@ const CardTraining = (props) => {
               className="imagenTraining"
               alt={training.name}
             />
-            <h3>Nombre: {training.name}</h3>
-            <p>Duración: {training.duration} min</p>
+            <h3>{training.name}</h3>
+            <p>Calorias Quemadas: {training.caloriesBurned} </p>
             <p>Categoría: {training.categoria}</p>
         </div>
     );

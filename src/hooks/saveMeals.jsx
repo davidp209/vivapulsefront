@@ -6,19 +6,19 @@ const saveMeals = () => {
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
 
-    const mealData = {
-        idAliment: [17, 18],
-        calories: 2,
-        name: "Merienda",
-        user: { id: 3 }
-    };
+    const saveMeal = async (datosDeLaComida) => {
+        console.log('Datos recibidos en saveMeal (hook):', datosDeLaComida);
 
-    const saveMeal = async () => {
+        if (!datosDeLaComida) {
+            console.error('saveMeal fue llamado sin datosDeLaComida');
+            return;
+        }
+
         setLoading(true);
         setError(null);
         setSuccess(false);
         try {
-            await postMeals(mealData);
+            await postMeals(datosDeLaComida);
             setSuccess(true);
         } catch (err) {
             setError(err.message);

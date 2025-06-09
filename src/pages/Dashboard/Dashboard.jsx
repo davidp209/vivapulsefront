@@ -22,7 +22,7 @@ const Dashboard = () => {
                 <h3 className="sidebar-title">VivaPulse</h3>
                 <ul className="sidebar-menu">
                     <li>
-                        <Link to="/alimentosPriv" className="sidebar-link">
+                        <Link to="/tusComidas" className="sidebar-link">
                             <FaAppleAlt className="sidebar-icon" />
                             <span>Comida</span>
                         </Link>

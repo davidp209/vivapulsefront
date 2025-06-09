@@ -17,7 +17,10 @@ import LicenciaUso from './pages/LicenciaUso/LicenciaUso'
 import PoliticaCookies from './pages/PoliticaCookies/PoliticaCookies'
 import FloatingActions from './components/FloatingActions/FloatingActions'
 import Chat from './components/Chat/Chat'
-import Pruebas from './pages/pruebas/pruebas'
+import AñadirComidas from './pages/AñadirComidas/AñadirComidas'
+import TusComidas from './pages/TusComidas/TusComidas'
+import MisEntrenamientos from './pages/MisEntrenamientos/MisEntrenamientos'
+import Carrito from './pages/Carrito/Carrito'
 
 function App() {
   return (
@@ -38,7 +41,10 @@ function App() {
           <Route path="/LicenciaUso" element={<LicenciaUso />} />
           <Route path="/PoliticaCookies" element={<PoliticaCookies />} />
           <Route path="/chat" element={<Chat></Chat>} />
-          <Route path="/pruebas" element={<Pruebas />} />
+          <Route path="/añadirComidas" element={<AñadirComidas />} />
+          <Route path="/tusComidas" element={<TusComidas />} />
+          <Route path="/misEntrenamientos" element={<MisEntrenamientos />} />
+          <Route path="/carrito" element={<Carrito />} />
           {/* Rutas adicionales */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
