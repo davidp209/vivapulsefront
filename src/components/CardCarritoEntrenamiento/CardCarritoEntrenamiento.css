@@ -1,0 +1,98 @@
+.cardCesta {
+    background: #f9fafc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    margin: 14px auto;
+    width: 96%;
+    max-width: 900px;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid #4f8cff;
+    transition: box-shadow 0.2s;
+}
+
+.cardCesta:hover {
+    box-shadow: 0 4px 16px rgba(79,140,255,0.13);
+}
+
+.cardCesta-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2a3b5c;
+    margin-bottom: 8px;
+}
+
+.cardCesta-title {
+    font-size: 1.2rem;
+}
+
+.cardCesta-calorias {
+    color: #4f8cff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    /* Asegura que no ocupe todo el ancho */
+    flex: 1;
+}
+
+.cardCesta-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardCesta-gramos-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.gramos-btn {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gramos-btn:hover {
+    background: #3566b8;
+}
+
+.gramos-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 48px;
+    text-align: center;
+}
+
+.eliminar-btn {
+    background: #ff4f4f;
+    width: 150px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.eliminar-btn:hover {
+    background: #b83232;
+}
+
+@media (max-width: 600px) {
+    .cardCesta {
+        width: 99%;
+        padding: 14px 8px;
+    }
+}

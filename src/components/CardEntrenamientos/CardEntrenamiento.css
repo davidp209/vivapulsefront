@@ -1,0 +1,71 @@
+.cardEntrenamiento {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin: 18px auto;
+    max-width: 420px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+    border-left: 6px solid #4f8cff;
+}
+
+.cardEntrenamiento:hover {
+    box-shadow: 0 4px 24px rgba(79,140,255,0.15);
+}
+
+.cardEntrenamiento-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f8ff;
+    padding: 16px 20px 10px 20px;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.cardEntrenamiento-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2a3b5c;
+}
+
+.cardEntrenamiento-date {
+    font-size: 0.95rem;
+    color: #7a8ca3;
+}
+
+.cardEntrenamiento-body {
+    padding: 16px 20px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cardEntrenamiento-section {
+    margin-bottom: 6px;
+}
+
+.cardEntrenamiento-list {
+    margin: 6px 0 0 0;
+    padding-left: 18px;
+    color: #3a4a6b;
+    font-size: 1rem;
+}
+
+.cardEntrenamiento-list li {
+    margin-bottom: 2px;
+}
+
+@media (max-width: 500px) {
+    .cardEntrenamiento {
+        max-width: 98vw;
+        margin: 12px 1vw;
+    }
+    .cardEntrenamiento-header,
+    .cardEntrenamiento-body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

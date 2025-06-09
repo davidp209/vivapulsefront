@@ -19,8 +19,10 @@ import FloatingActions from './components/FloatingActions/FloatingActions'
 import Chat from './components/Chat/Chat'
 import AñadirComidas from './pages/AñadirComidas/AñadirComidas'
 import TusComidas from './pages/TusComidas/TusComidas'
-import MisEntrenamientos from './pages/MisEntrenamientos/MisEntrenamientos'
+import TusEntrenamientos from './pages/TusEntrenamientos/TusEntrenamientos'
 import Carrito from './pages/Carrito/Carrito'
+import AñadirWorkouts from './pages/AñadirWorkouts/AñadirWorkouts'
+import CarritoEntrenamientos from './pages/CarritoEntrenamientos/CarritoEntrenamientos'
 
 function App() {
   return (
@@ -43,8 +45,10 @@ function App() {
           <Route path="/chat" element={<Chat></Chat>} />
           <Route path="/añadirComidas" element={<AñadirComidas />} />
           <Route path="/tusComidas" element={<TusComidas />} />
-          <Route path="/misEntrenamientos" element={<MisEntrenamientos />} />
+          <Route path="/tusEntrenamientos" element={<TusEntrenamientos />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/añadirEntrenamiento" element={<AñadirWorkouts />} />
+          <Route path="/carritoEntrenamientos" element={<CarritoEntrenamientos />} />
           {/* Rutas adicionales */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>

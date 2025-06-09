@@ -28,7 +28,7 @@ const Dashboard = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/entrenamientos" className="sidebar-link">
+                        <Link to="/tusEntrenamientos" className="sidebar-link">
                             <FaDumbbell className="sidebar-icon" />
                             <span>Entrenamiento</span>
                         </Link>
