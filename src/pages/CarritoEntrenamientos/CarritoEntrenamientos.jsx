@@ -3,6 +3,7 @@ import saveWorkouts from '../../hooks/saveWorkouts';
 import useUserDetails from '../../hooks/useUserDetails';
 import CardCarritoEntrenamiento from '../../components/CardCarritoEntrenamiento/CardCarritoEntrenamiento';
 import { useNavigate } from 'react-router-dom';
+import { create } from 'lodash';
 
 const CarritoEntrenamientos = () => {
     const { saveWorkout, loading, error, success } = saveWorkouts();
@@ -60,7 +61,8 @@ const CarritoEntrenamientos = () => {
                 totalCalories: caloriasPorMinuto * tiempo,
                 time: tiempo,
                 user: { id: userDetails.id },
-                training: { id: entrenamiento.id }
+                training: { id: entrenamiento.id },
+                createdAt: new Date().toISOString(),
             };
         });
         setWorkoutsData(entrenamientosAEnviar);

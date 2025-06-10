@@ -6,7 +6,7 @@ import "./Contacto.css";
 
 const Contacto = () => {
 
- return (
+  return (
     <section className="contacto-section d-flex align-items-center justify-content-center min-vh-100">
       <div className="container text-center py-5">
         <h1 className="display-4 fw-bold gradient-text mb-4">¿Hablamos?</h1>
@@ -16,18 +16,22 @@ const Contacto = () => {
         </p>
         <div className="row justify-content-center">
           <div className="col-md-7">
-            <form className="contact-form p-4 rounded shadow bg-white">
+            <form
+              className="contact-form p-4 rounded shadow bg-white"
+              action="https://formsubmit.co/davidfotosct@gmail.com"
+              method="POST"
+            >
               <div className="mb-3 text-start">
                 <label htmlFor="nombre" className="form-label fw-semibold">Nombre</label>
-                <input type="text" className="form-control" id="nombre" placeholder="Tu nombre" required />
+                <input type="text" className="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
               </div>
               <div className="mb-3 text-start">
                 <label htmlFor="email" className="form-label fw-semibold">Correo electrónico</label>
-                <input type="email" className="form-control" id="email" placeholder="tu@email.com" required />
+                <input type="email" className="form-control" id="email" name="email" placeholder="tu@email.com" required />
               </div>
               <div className="mb-3 text-start">
                 <label htmlFor="mensaje" className="form-label fw-semibold">Mensaje</label>
-                <textarea className="form-control" id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                <textarea className="form-control" id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
               </div>
               <button type="submit" className="btn btn-primary btn-lg w-100 mt-3 shadow">Enviar mensaje</button>
             </form>

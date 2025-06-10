@@ -8,9 +8,10 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
+
   const sendMessage = async (message) => {
     try {
-      const res = await fetch("https://vivapulse-backend.onrender.com/api/chat", {
+      const res = await fetch("http://localhost:8081/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message }),
@@ -37,6 +38,7 @@ const Chat = () => {
     setMessages((prev) => [...prev, newBotMessage]);
   }, 1000);
 
+  console.log("Mensajes actuales:", messages);
   return (
     <div className="chat-container">
       <div className="chat-box">
