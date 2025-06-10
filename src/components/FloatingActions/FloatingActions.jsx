@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FloatingActions.css";
 import { FaPlus, FaWhatsapp, FaRobot } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const FloatingActions = () => {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ const FloatingActions = () => {
 
       <div className="action-buttons">
         <a
-          href="https://wa.me/1234567890" // Cambia a tu número de WhatsApp
+          href="https://wa.me/1234567890"
           target="_blank"
           rel="noopener noreferrer"
           className="action-btn whatsapp"
@@ -21,12 +22,13 @@ const FloatingActions = () => {
           <FaWhatsapp />
         </a>
 
-        <button
-          onClick={() => alert("Abriendo chat con IA...")}
+        <Link
+          to="/chat"
           className="action-btn ai-chat"
+          aria-label="Abrir chat con IA"
         >
           <FaRobot />
-        </button>
+        </Link>
       </div>
     </div>
   );
