@@ -33,6 +33,7 @@ const Contacto = () => {
                 <label htmlFor="mensaje" className="form-label fw-semibold">Mensaje</label>
                 <textarea className="form-control" id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
               </div>
+              <input type="hidden" name="_next" value="https://vivapulsefront.vercel.app" />
               <button type="submit" className="btn btn-primary btn-lg w-100 mt-3 shadow">Enviar mensaje</button>
             </form>
           </div>
