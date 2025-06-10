@@ -28,6 +28,10 @@ button {
 
 .chat-card {
   width: 100%;
-  max-width: 600px; /* Ajusta este valor a tu gusto */
+  max-width: 600px; 
   margin: 0 auto;
+}
+.caritaRobot{
+  font-size: 1.7rem;
+    
 }

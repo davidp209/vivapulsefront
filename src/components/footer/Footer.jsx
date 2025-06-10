@@ -51,10 +51,18 @@ const Footer = () => {
             <p>© {new Date().getFullYear()} VivaPulse. All rights reserved.</p>
           </div>
           <div className="col-md-6 col-lg-5 text-md-end text-center social-icons">
-            <a href="#"><i className="bi bi-facebook me-3"></i></a>
-            <a href="#"><i className="bi bi-twitter me-3"></i></a>
-            <a href="#"><i className="bi bi-instagram me-3"></i></a>
-            <a href="#"><i className="bi bi-linkedin me-3"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i className="bi bi-facebook me-3" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i className="bi bi-twitter me-3" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i className="bi bi-instagram me-3" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i className="bi bi-linkedin me-3" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>

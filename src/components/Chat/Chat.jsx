@@ -2,6 +2,7 @@
 // Instala lodash: npm install lodash
 import React, { useState } from "react";
 import { debounce } from "lodash";
+import { FaRobot } from "react-icons/fa";
 import "./Chat.css";
 
 const Chat = () => {
@@ -14,6 +15,7 @@ const Chat = () => {
   ]);
   const [input, setInput] = useState("");
 
+  // Función para enviar el mensaje al backend y obtener la respuesta del modelo
   const sendMessage = async (message) => {
     try {
       const res = await fetch("http://localhost:8081/api/chat", {
@@ -30,6 +32,8 @@ const Chat = () => {
     }
   };
 
+  // Usamos debounce para evitar múltiples envíos rápidos
+  // Esto limita la frecuencia de las llamadas a la función handleSend
   const handleSend = debounce(async () => {
     if (!input.trim()) return;
     setMessages((prev) => [...prev, { role: "user", content: input }]);
@@ -42,7 +46,9 @@ const Chat = () => {
     <div className="chat-outer d-flex align-items-center justify-content-center min-vh-100 bg-light">
       <div className="chat-card shadow rounded-4 p-0">
         <div className="chat-header bg-primary text-white rounded-top-4 px-4 py-3 d-flex align-items-center gap-2">
-          <span style={{ fontSize: "1.7rem" }}>🤖</span>
+          <span className="caritaRobot" >
+            <FaRobot />
+          </span>
           <span className="fw-bold fs-5">Chat Vivapulse</span>
         </div>
         <div className="chat-box p-3">
@@ -83,4 +89,3 @@ const Chat = () => {
 };
 
 export default Chat;
-// Este componente de chat permite a los usuarios enviar mensajes y recibir respuestas de un modelo de IA.
