@@ -9,18 +9,21 @@ const Chat = () => {
   const [input, setInput] = useState("");
 
   const sendMessage = async (message) => {
-    const res = await fetch("https://vivapulse-backend.onrender.com/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
-    });
+    try {
+      const res = await fetch("https://vivapulse-backend.onrender.com/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
 
-    const data = await res.json();
-    if (data.error) {
-      // Puedes mostrar el error al usuario o manejarlo como prefieras
-      return "Lo siento, no se pudo obtener respuesta del modelo.";
+      const data = await res.json();
+      if (data.error) {
+        return "Lo siento, no se pudo obtener respuesta del modelo.";
+      }
+      return data.reply;
+    } catch (e) {
+      return "Error de conexión con el servidor.";
     }
-    return data.reply;
   };
 
   const handleSend = debounce(async () => {

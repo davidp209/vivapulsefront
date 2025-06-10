@@ -34,9 +34,11 @@ const TusComidas = () => {
                     <AjaxLoader />
                 ) : (
                     <div>
-                        {mealsID?.map(comida => (
-                            <CardComida key={comida.id} comida={comida} />
-                        ))}
+                        {[...mealsID]
+                            .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Ordenar por fecha de creación (más reciente primero)
+                            .map(comida => (
+                                <CardComida key={comida.id} comida={comida} />
+                            ))}
                     </div>
                 )}
             </div>
