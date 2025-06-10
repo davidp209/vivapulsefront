@@ -23,6 +23,7 @@ import TusEntrenamientos from './pages/TusEntrenamientos/TusEntrenamientos'
 import Carrito from './pages/Carrito/Carrito'
 import AñadirWorkouts from './pages/AñadirWorkouts/AñadirWorkouts'
 import CarritoEntrenamientos from './pages/CarritoEntrenamientos/CarritoEntrenamientos'
+import Barralateral from './components/BarraLateral/Barralateral'
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/añadirEntrenamiento" element={<AñadirWorkouts />} />
           <Route path="/carritoEntrenamientos" element={<CarritoEntrenamientos />} />
+          <Route path="/barraLateral" element={<Barralateral />} />
           {/* Rutas adicionales */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>

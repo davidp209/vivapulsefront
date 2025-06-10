@@ -17,7 +17,7 @@ const CardAlimentos = ({ alimento, mostrarBotonCesta, onAñadirCesta }) => {
                 <p>Calorías: {alimento.calories}</p>
                 <p>Categoria: {alimento.categoria} </p>	
                 {mostrarBotonCesta && (
-                    <button className="btn btn-success mt-2" onClick={() => {
+                    <button className="btn btn-primary btn-lg px-5 shadow" onClick={() => {
                         onAñadirCesta(alimento.id);
                         }}>
                         Añadir a la cesta

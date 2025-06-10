@@ -15,12 +15,10 @@ const AñadirComidas = () => {
     // Función para añadir un alimento a la cesta
     const handleAñadirCesta = (alimento) => {
         // Aquí puedes guardar en localStorage, context, o redirigir a /pruebas
-        // Ejemplo: guardar en localStorage
         const nuevaCesta = [...cesta, alimento];
         setCesta(nuevaCesta);
         localStorage.setItem("cesta", JSON.stringify(nuevaCesta));
-        // Opcional: redirigir a /pruebas
-        // window.location.href = "/pruebas";
+      
     };
 
     // Filtrar alimentos según el término de búsqueda
@@ -38,6 +36,14 @@ const AñadirComidas = () => {
                     aria-label="Ir al carrito"
                 >
                     <FaShoppingCart />
+                    {cesta.length > 0 && (
+                        <span
+                            className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            style={{ fontSize: "0.8rem" }}
+                        >
+                            {cesta.length}
+                        </span>
+                    )}
                 </Link>
             </div>
 

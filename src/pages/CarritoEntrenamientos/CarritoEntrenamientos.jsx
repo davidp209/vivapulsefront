@@ -83,12 +83,15 @@ const CarritoEntrenamientos = () => {
         }));
     };
 
+    
+    // Me redirige al usuario a la página anterior si se guarda correctamente
     useEffect(() => {
         if (success) {
             localStorage.setItem('workouts', '[]');
-            navigate(-1); // Redirige a la página anterior
+            navigate('/dashboard'); 
         }
     }, [success, navigate]);
+
 
     if (buscando || !userDetails) {
         return <div>Cargando usuario...</div>;

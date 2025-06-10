@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import useMealsID from "../../hooks/useMealsID";
 import useUserDetails from "../../hooks/useUserDetails";
 import "./Dashboard.css";
-import { FaAppleAlt, FaDumbbell, FaBrain, FaSignOutAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import useWorkoutsID from "../../hooks/useWorkoutsID";
+import Barralateral from "../../components/BarraLateral/Barralateral";
 
 const Dashboard = () => {
 
-    // Eliminated unused and duplicate variables from useMealsID
     const  {mealsID, buscandoMeals} = useMealsID();
     const [caloriasEsperadas, setCaloriasEsperadas] = useState(2000);
     const [caloriasConsumidas, setCaloriasConsumidas] = useState(0);
@@ -62,35 +60,7 @@ const Dashboard = () => {
     return (
         <div className="dashboard-wrapper">
             {/* Barra lateral */}
-            <div className="sidebar">
-                <h3 className="sidebar-title">VivaPulse</h3>
-                <ul className="sidebar-menu">
-                    <li>
-                        <Link to="/tusComidas" className="sidebar-link">
-                            <FaAppleAlt className="sidebar-icon" />
-                            <span>Comida</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/tusEntrenamientos" className="sidebar-link">
-                            <FaDumbbell className="sidebar-icon" />
-                            <span>Entrenamiento</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/salud-mental" className="sidebar-link">
-                            <FaBrain className="sidebar-icon" />
-                            <span>Salud Mental</span>
-                        </Link>
-                    </li>
-                </ul>
-                <div className="sidebar-footer">
-                    <button className="logout-btn" onClick={logout}>
-                        <FaSignOutAlt className="sidebar-icon" />
-                        <span>Cerrar Sesión</span>
-                    </button>
-                </div>
-            </div>
+           <Barralateral />
     
 
             <div className="dashboard-container">
