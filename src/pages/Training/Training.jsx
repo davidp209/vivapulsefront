@@ -6,6 +6,7 @@ import { useState } from 'react';
 const training = (props) => {
     const { trainingID, buscando } = useTraining()
     const [busquedaTraining, setBusquedaTraining] = useState("");
+    const [visibleCount, setVisibleCount] = useState(8); // Muestra 8 al principio
 
     const filteredTraining = trainingID?.filter((item) =>
         item.name.toLowerCase().includes(busquedaTraining.toLowerCase())
@@ -25,12 +26,19 @@ const training = (props) => {
             </div>
 
             <div className="row justify-content-center text-center">
-                {buscando ? <AjaxLoader /> : filteredTraining?.map((item, index) => (
+                {buscando ? <AjaxLoader /> : filteredTraining?.slice(0, visibleCount).map((item, index) => (
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={index}>
                         <CardTraining training={item} />
                     </div>
                 ))}
             </div>
+            {filteredTraining && visibleCount < filteredTraining.length && (
+                <div className="text-center mb-4">
+                    <button className="btn btn-primary" onClick={() => setVisibleCount(visibleCount + 8)}>
+                        Cargar más
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

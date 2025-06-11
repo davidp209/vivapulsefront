@@ -85,7 +85,7 @@ const TusEntrenamientos = () => {
                                 </select>
                             </div>
                         </div>
-                        {/* Cards */}
+                       
                         <div className="row justify-content-center px-2">
                             {buscando ? (
                                 <AjaxLoader />
@@ -97,6 +97,7 @@ const TusEntrenamientos = () => {
                                             <div key={entrenamiento.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
                                                 <CardEntrenamiento entrenamiento={entrenamiento} />
                                             </div>
+                                            
                                         ))
                                 ) : (
                                     <p>No hay entrenamientos registrados.</p>

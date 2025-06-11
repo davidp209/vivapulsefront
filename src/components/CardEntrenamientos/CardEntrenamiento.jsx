@@ -8,16 +8,17 @@ const CardEntrenamiento = ({ entrenamiento }) => {
     //esto es para obtener el nombre del entrenamiento a partir del ID
     const getNombreTraining = (id) => {
         if (!Array.isArray(trainingID)) return `ID: ${id}`;
-        const training = trainingID.find(a => a.id === id);
+        const training = trainingID.find(a => a.id === id)
         return training ? training.name : `ID: ${id}`;
     };
+    
 
     return (
         
         <div className="cardEntrenamiento">
             <div className="cardEntrenamiento-header">
                 <span className="cardEntrenamiento-title">
-                    {getNombreTraining(entrenamiento.id)}
+                    {getNombreTraining(entrenamiento.training.id)}
                 </span>
                 <span className="cardEntrenamiento-date">
                     {entrenamiento.createdAt
