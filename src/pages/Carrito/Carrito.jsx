@@ -43,7 +43,7 @@ const Carrito = () => {
 
         console.log('[useEffect mealData] Condiciones CUMPLIDAS. Calculando y seteando mealData...');
         const totalCalorias = cesta.reduce((total, comida) => {
-            const gramos = gramosPorAlimento[comida.id] || 50;
+            const gramos = gramosPorAlimento[comida.id] || 5;
             const calorias = ((comida.calories || 0) * gramos) / 100;
             return total + calorias;
         }, 0);
@@ -105,7 +105,7 @@ const Carrito = () => {
                     <CardCesta
                         key={comida.id}
                         comida={comida}
-                        gramos={gramosPorAlimento[comida.id] || 50}
+                        gramos={gramosPorAlimento[comida.id] || 5}
                         onGramosChange={handleGramosChange}
                         onRemove={() => handleRemove(comida.id)}
                     />

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import './CardCesta.css';
 
 const CardCesta = ({ comida, gramos, onGramosChange, onRemove }) => {
-    const handleIncrement = () => onGramosChange(comida.id, gramos + 50);
-    const handleDecrement = () => onGramosChange(comida.id, gramos > 50 ? gramos - 50 : 50);
+    const handleIncrement = () => onGramosChange(comida.id, gramos + 5);
+    const handleDecrement = () => onGramosChange(comida.id, gramos > 5 ? gramos - 5 : 5);
 
     const caloriasTotales = ((comida.calories || 0) * gramos) / 100;
 
