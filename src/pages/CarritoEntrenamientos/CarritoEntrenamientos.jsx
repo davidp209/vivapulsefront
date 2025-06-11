@@ -104,8 +104,8 @@ const CarritoEntrenamientos = () => {
                     />
                 ))
             }
-            <h1>Resumen</h1>
-            <pre>{JSON.stringify(workoutsData && workoutsData[0], null, 2)}</pre>
+           {/* <h1>Resumen</h1>
+            <pre>{JSON.stringify(workoutsData && workoutsData[0], null, 2)}</pre>*/}
 
             <div className="row justify-content-center my-4">
                 <div className="col-auto">
