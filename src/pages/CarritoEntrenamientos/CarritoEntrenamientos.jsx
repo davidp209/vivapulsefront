@@ -18,10 +18,6 @@ const CarritoEntrenamientos = () => {
     const storedCarrito = localStorage.getItem('workouts');
 
 
-    console.log('[CarritoEntrenamientos] storedCarrito:', storedCarrito[0]);
-
-
-
     // Cargar entrenamientos del localStorage
     useEffect(() => {
         console.log('[useEffect Carrito] Cargando workouts desde localStorage...');
@@ -52,13 +48,11 @@ const CarritoEntrenamientos = () => {
 
         console.log('[useEffect workoutsData] Condiciones CUMPLIDAS. Calculando y seteando workoutsData...');
         const entrenamientosAEnviar = carrito.map(entrenamiento => {
-
             const tiempo = tiemposPorEntrenamiento[entrenamiento.id] || entrenamiento.time || 1;
             const caloriasTotales = entrenamiento.caloriesBurned || entrenamiento.total_calories || 0;
-            const caloriasPorMinuto = caloriasTotales / (entrenamiento.time || 1);
-
+            const caloriasPorMinuto = caloriasTotales / 60;
             return {
-                totalCalories: caloriasPorMinuto * tiempo,
+                totalCalories: Number((caloriasPorMinuto * tiempo).toFixed(2)), // Redondea a 2 decimales
                 time: tiempo,
                 user: { id: userDetails.id },
                 training: { id: entrenamiento.id },
@@ -110,8 +104,8 @@ const CarritoEntrenamientos = () => {
                     />
                 ))
             }
-            { /*<h1>Resumen</h1>
-            <pre>{JSON.stringify(workoutsData && workoutsData[0], null, 2)}</pre>*/}
+            <h1>Resumen</h1>
+            <pre>{JSON.stringify(workoutsData && workoutsData[0], null, 2)}</pre>
 
             <div className="row justify-content-center my-4">
                 <div className="col-auto">
