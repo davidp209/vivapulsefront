@@ -48,7 +48,17 @@ const Footer = () => {
         {/* Parte inferior */}
         <div className="row align-items-center">
           <div className="col-md-6 col-lg-7 text-md-start text-center">
-            <p>© {new Date().getFullYear()} VivaPulse. All rights reserved.</p>
+            <p>
+             VivaPulse © 2025 por Daniel Soto Ortiz y David Paredes Ortuño tiene licencia bajo 
+              <a
+                href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-underline"
+              >
+                CC BY-NC-ND 4.0
+              </a>
+            </p>
           </div>
           <div className="col-md-6 col-lg-5 text-md-end text-center social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
