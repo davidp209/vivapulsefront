@@ -17,7 +17,7 @@ const training = (props) => {
             <div className="row justify-content-center text-center mb-3 mt-5">
                 <input
                     type="text"
-                    placeholder="Buscar alimentos..."
+                    placeholder="Buscar entrenamientos..."
                     value={busquedaTraining}
                     onChange={(e) => setBusquedaTraining(e.target.value)}
                     className="form-control w-50"
