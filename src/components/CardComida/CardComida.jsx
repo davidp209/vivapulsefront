@@ -3,7 +3,7 @@ import useAliments from '../../hooks/useAliments';
 
 const CardComida = ({ comida }) => {
     const { alimentosID } = useAliments();
-    console.log('alimentosID:', alimentosID);
+    //console.log('alimentosID:', alimentosID);
 
     const getNombreAlimento = (id) => {
         if (!Array.isArray(alimentosID)) return `ID: ${id}`;

@@ -16,9 +16,9 @@ const CarritoEntrenamientos = () => {
 
 
     const storedCarrito = localStorage.getItem('workouts');
-    
 
- console.log('[CarritoEntrenamientos] storedCarrito:', storedCarrito[0]);
+
+    console.log('[CarritoEntrenamientos] storedCarrito:', storedCarrito[0]);
 
 
 
@@ -83,12 +83,12 @@ const CarritoEntrenamientos = () => {
         }));
     };
 
-    
+
     // Me redirige al usuario a la página anterior si se guarda correctamente
     useEffect(() => {
         if (success) {
             localStorage.setItem('workouts', '[]');
-            navigate('/dashboard'); 
+            navigate('/dashboard');
         }
     }, [success, navigate]);
 
@@ -110,17 +110,23 @@ const CarritoEntrenamientos = () => {
                     />
                 ))
             }
-            <h1>Resumen</h1>
-            <pre>{JSON.stringify(workoutsData && workoutsData[0], null, 2)}</pre>
-            <button
-                onClick={() => workoutsData && workoutsData.length > 0 && saveWorkout(workoutsData[0])}
-                disabled={!workoutsData || workoutsData.length === 0 || loading}
-                
-            >
-                {loading ? 'Guardando...' : 'Guardar entrenamientos'}
-            </button>
+            { /*<h1>Resumen</h1>
+            <pre>{JSON.stringify(workoutsData && workoutsData[0], null, 2)}</pre>*/}
+
+            <div className="row justify-content-center my-4">
+                <div className="col-auto">
+                    <button
+                        className='btn btn-primary btn-lg px-5 shadow'
+                        onClick={() => workoutsData && workoutsData.length > 0 && saveWorkout(workoutsData[0])}
+                        disabled={!workoutsData || workoutsData.length === 0 || loading}
+                    >
+                        {loading ? 'Guardando...' : 'Guardar entrenamientos'}
+                    </button>
+                </div>
+            </div>
             {error && <p>Error al guardar: {error.message || JSON.stringify(error)}</p>}
             {success && <p>¡Guardado exitosamente!</p>}
+
         </div>
     );
 };

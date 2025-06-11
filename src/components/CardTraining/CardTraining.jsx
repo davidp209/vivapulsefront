@@ -16,7 +16,7 @@ const CardTraining = ({ training, mostrarBotonSeleccionar, onAñadirSeleccionado
                 {mostrarBotonSeleccionar && (
                   <Link to="/carritoEntrenamientos">
                     <button
-                        className="btn btn-success mt-2"
+                        className="btn btn-primary btn-lg px-5 shadow"
                         onClick={() => onAñadirSeleccionado(training)}
                     >
                         Añadir a la selección
