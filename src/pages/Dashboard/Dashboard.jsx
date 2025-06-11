@@ -4,6 +4,7 @@ import useUserDetails from "../../hooks/useUserDetails";
 import "./Dashboard.css";
 import useWorkoutsID from "../../hooks/useWorkoutsID";
 import Barralateral from "../../components/BarraLateral/Barralateral";
+import { FaSignOutAlt } from "react-icons/fa";
 
 const Dashboard = () => {
 
@@ -63,9 +64,12 @@ const Dashboard = () => {
            <Barralateral />
     
 
-            <div className="dashboard-container">
-                <h1 className="mb-4 fw-bold text-primary text-center pt-4">Area Personal</h1>
+            <div className="dashboard-container position-relative">
+                <button className="logout-icon-btn" onClick={logout} title="Cerrar sesión">
+                    <FaSignOutAlt size={26} />
+                </button>
 
+                <h1 className="mb-4 fw-bold text-primary text-center pt-4">Area Personal</h1>
                 <div className="container py-4">
                     <div className="row justify-content-center gap-4">
                         <div className="col-md-3 d-flex flex-column align-items-center">
