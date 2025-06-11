@@ -6,7 +6,7 @@ import { useState } from 'react';
 const training = (props) => {
     const { trainingID, buscando } = useTraining()
     const [busquedaTraining, setBusquedaTraining] = useState("");
-    const [visibleCount, setVisibleCount] = useState(8); // Muestra 8 al principio
+    const [visibleCount, setVisibleCount] = useState(8); 
 
     const filteredTraining = trainingID?.filter((item) =>
         item.name.toLowerCase().includes(busquedaTraining.toLowerCase())

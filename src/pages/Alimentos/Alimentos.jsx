@@ -6,6 +6,7 @@ import CardAlimentos from "../../components/CardAlimentos/CardAlimentos";
 const Alimentos = () => {
     const { alimentosID, buscando } = useAliments();
     const [searchTerm, setSearchTerm] = useState("");
+    const [visibleCount, setVisibleCount] = useState(8); 
 
     // Filtrar alimentos según el término de búsqueda
     const filteredAlimentos = alimentosID?.filter((item) =>
@@ -14,7 +15,6 @@ const Alimentos = () => {
 
     return (
         <div>
-
             {/* Barra de búsqueda */}
             <div className="row justify-content-center text-center mb-3 mt-5">
                 <input
@@ -30,13 +30,20 @@ const Alimentos = () => {
                 {buscando ? (
                     <AjaxLoader />
                 ) : (
-                    filteredAlimentos?.map((item, index) => (
+                    filteredAlimentos?.slice(0, visibleCount).map((item, index) => (
                         <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                             <CardAlimentos alimento={item} />
                         </div>
                     ))
                 )}
             </div>
+            {filteredAlimentos && visibleCount < filteredAlimentos.length && (
+                <div className="text-center mb-4">
+                    <button className="btn btn-primary" onClick={() => setVisibleCount(visibleCount + 8)}>
+                        Cargar más
+                    </button>
+                </div>
+            )}
         </div>
     );
 };
