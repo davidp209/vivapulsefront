@@ -1,4 +1,4 @@
-.tus-comidas-container {
+.tus-entrenamientos-container {
     background: #e3f2fd;
     border-radius: 18px;
     box-shadow: 0 2px 16px rgba(33, 150, 243, 0.10);
@@ -8,21 +8,21 @@
     text-align: center;
 }
 
-.tus-comidas-title {
+.tus-entrenamientos-title {
     font-size: 2.2rem;
     font-weight: 700;
     color: #1976d2;
     margin-bottom: 18px;
 }
 
-.tus-comidas-description {
+.tus-entrenamientos-description {
     font-size: 1.15rem;
     color: #336699;
     margin-bottom: 24px;
     line-height: 1.6;
 }
 
-.tus-comidas-emoji {
+.tus-entrenamientos-emoji {
     font-size: 3rem;
     display: block;
     margin-top: 10px;

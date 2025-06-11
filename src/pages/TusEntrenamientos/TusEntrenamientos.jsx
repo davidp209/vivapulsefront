@@ -13,15 +13,15 @@ const MisEntrenamientos = () => {
     return (
         <div className="dashboard-wrapper">
             <Barralateral />
-            <div className="tus-comidas-container">
-                <h1 className="tus-comidas-title">
+            <div className="tus-entrenamientos-container">
+                <h1 className="tus-entrenamientos-title">
                     Tus entrenamientos registrados
                 </h1>
-                <p className="tus-comidas-description">
+                <p className="tus-entrenamientos-description">
                     Aquí aparecerán todos los entrenamientos que vayas registrando.<br />
                     ¡Lleva un control de tu progreso físico y mantente motivado!
                 </p>
-                <span className="tus-comidas-emoji">
+                <span className="tus-entrenamientos-emoji">
                     🏋️‍♂️
                 </span>
                 <Link

@@ -124,7 +124,9 @@ const Carrito = () => {
                         className="form-select"
                         value={tipoComida}
                         onChange={e => setTipoComida(e.target.value)}
+                        required
                     >
+                        <option value="" disabled>Selecciona un tipo de comida</option>
                         <option value="Desayuno">Desayuno</option>
                         <option value="Comida">Comida</option>
                         <option value="Merienda">Merienda</option>
@@ -135,7 +137,7 @@ const Carrito = () => {
                     <button
                         className="btn btn-primary btn-lg px-5 shadow"
                         onClick={() => mealData && saveMeal(mealData)}
-                        disabled={!mealData || loading}
+                        disabled={!mealData || loading || !tipoComida}
                     >
                         {loading ? 'Guardando...' : 'Guardar comidas'}
                     </button>
