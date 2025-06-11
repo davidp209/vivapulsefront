@@ -64,7 +64,7 @@ const Dashboard = () => {
     
 
             <div className="dashboard-container">
-                <h1 className="mb-4 fw-bold text-primary text-center pt-4">Dashboard</h1>
+                <h1 className="mb-4 fw-bold text-primary text-center pt-4">Area Personal</h1>
 
                 <div className="container py-4">
                     <div className="row justify-content-center gap-4">
