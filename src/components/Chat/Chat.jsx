@@ -18,7 +18,7 @@ const Chat = () => {
   // Función para enviar el mensaje al backend y obtener la respuesta del modelo
   const sendMessage = async (message) => {
     try {
-      const res = await fetch("http://localhost:8081/api/chat", {
+      const res = await fetch("https://vivapulse-backend.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message }),
