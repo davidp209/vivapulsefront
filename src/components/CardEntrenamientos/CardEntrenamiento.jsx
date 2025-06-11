@@ -19,14 +19,22 @@ const CardEntrenamiento = ({ entrenamiento }) => {
                 <span className="cardEntrenamiento-title">
                     {getNombreTraining(entrenamiento.id)}
                 </span>
-                <span className="cardEntrenamiento-date">Tiempo: {entrenamiento.time}</span>
+                <span className="cardEntrenamiento-date">
+                    {entrenamiento.createdAt
+                        ? new Date(entrenamiento.createdAt).toLocaleDateString('es-ES', {
+                            year: 'numeric',
+                            month: '2-digit',
+                            day: '2-digit'
+                        })
+                        : ''}
+                </span>
             </div>
             <div className="cardEntrenamiento-body">
                 <div className="cardEntrenamiento-section">
                     <strong>Calorías totales:</strong> <span>{entrenamiento.totalCalories}</span>
                 </div>
                 <div className="cardEntrenamiento-section">
-                    <strong>Training ID:</strong> <span>{entrenamiento.training.id}</span>
+                    <strong>Tiempo: </strong> <span>{entrenamiento.time} min</span>
                 </div>
             </div>
         </div>

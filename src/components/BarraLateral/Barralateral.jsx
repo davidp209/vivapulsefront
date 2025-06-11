@@ -40,7 +40,7 @@ const Barralateral = () => {
             </Link>
           </li>
           <li>
-            <Link to="/salud-mental" className="sidebar-link">
+            <Link to="/saludMental" className="sidebar-link">
               <FaBrain className="sidebar-icon" />
               <span>Salud Mental</span>
             </Link>

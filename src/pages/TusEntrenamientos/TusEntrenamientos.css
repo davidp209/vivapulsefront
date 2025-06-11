@@ -2,10 +2,15 @@
     background: #e3f2fd;
     border-radius: 18px;
     box-shadow: 0 2px 16px rgba(33, 150, 243, 0.10);
-    max-width: 500px;
-    margin: 60px auto 0 auto;
     padding: 40px 32px 32px 32px;
     text-align: center;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
 }
 
 .tus-entrenamientos-title {
@@ -26,4 +31,11 @@
     font-size: 3rem;
     display: block;
     margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+    .tus-entrenamientos-container {
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
 }

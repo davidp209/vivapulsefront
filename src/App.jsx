@@ -24,6 +24,7 @@ import Carrito from './pages/Carrito/Carrito'
 import AñadirWorkouts from './pages/AñadirWorkouts/AñadirWorkouts'
 import CarritoEntrenamientos from './pages/CarritoEntrenamientos/CarritoEntrenamientos'
 import Barralateral from './components/BarraLateral/Barralateral'
+import SaludMental from './pages/SaludMental/SaludMental'
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/añadirEntrenamiento" element={<AñadirWorkouts />} />
           <Route path="/carritoEntrenamientos" element={<CarritoEntrenamientos />} />
           <Route path="/barraLateral" element={<Barralateral />} />
+          <Route path="/saludMental" element={<SaludMental />} />
           {/* Rutas adicionales */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
