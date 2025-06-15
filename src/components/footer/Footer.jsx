@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-6 col-lg-7 text-md-start text-center">
             <p>
-             VivaPulse © 2025 por Daniel Soto Ortiz y David Paredes Ortuño tiene licencia bajo 
+              VivaPulse © 2025 por Daniel Soto Ortiz y David Paredes Ortuño tiene licencia bajo&nbsp;
               <a
                 href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es"
                 target="_blank"
@@ -58,6 +58,19 @@ const Footer = () => {
               >
                 CC BY-NC-ND 4.0
               </a>
+              <span style={{ marginLeft: "0.5em" }}>
+                <img
+                  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+                  alt="Creative Commons"
+                  style={{ maxWidth: "1em", maxHeight: "1em", verticalAlign: "middle" }}
+                />
+                <img
+                  src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
+                  alt="Atribución"
+                  style={{ maxWidth: "1em", maxHeight: "1em", marginLeft: ".2em", verticalAlign: "middle" }}
+                />
+             
+              </span>
             </p>
           </div>
           <div className="col-md-6 col-lg-5 text-md-end text-center social-icons">
